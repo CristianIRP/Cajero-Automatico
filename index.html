@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Cajero Automático</h1>
+    <div class="form-container">
+      <label for="account">Cuenta:</label>
+      <input type="text" id="account" placeholder="Ingrese el nombre de cuenta">
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" placeholder="Ingrese la contraseña">
+      <div class="button-container">
+        <button onclick="login()">Iniciar sesión</button>
+        <button onclick="addAccount()">Crear cuenta</button>
+        <button onclick="logout()">Cerrar sesión</button>
+        <button onclick="deleteAccount()">Eliminar cuenta</button>
+      </div>
+    </div>
+    <div class="transaction-container">
+      <div class="input-container">
+        <label for="amount">Monto:</label>
+        <input type="number" id="amount" placeholder="Ingrese el monto">
+      </div>
+      <div class="input-container">
+        <label for="destinationAccount">Cuenta destino:</label>
+        <select id="destinationAccount"></select>
+      </div>
+      <div class="button-container">
+        <button onclick="deposit()">Depositar</button>
+        <button onclick="withdraw()">Retirar</button>
+        <button onclick="checkBalance()">Consultar saldo</button>
+      </div>
+      <div id="balance" class="balance">Saldo: $0</div>
+      <div id="account-list">Cuentas disponibles:</div>
+    </div>
+  </div>
+  <script src="datos.js"></script>
+</body>
+</html>

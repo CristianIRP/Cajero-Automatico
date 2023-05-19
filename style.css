@@ -1,0 +1,59 @@
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .form-container {
+    margin-bottom: 20px;
+  }
+  
+  .form-container label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .form-container input {
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .button-container button {
+    padding: 10px 20px;
+    margin: 0 5px;
+  }
+  
+  .transaction-container {
+    margin-bottom: 20px;
+  }
+  
+  .input-container {
+    margin-bottom: 10px;
+  }
+  
+  .balance {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  #account-list {
+    text-align: left;
+  }
+  
+  #account-list div {
+    margin-bottom: 5px;
+  }
+  
