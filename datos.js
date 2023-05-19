@@ -32,29 +32,23 @@ function deposit() {
 
 function withdraw() {
   const amountElement = document.getElementById('amount');
-  const destinationAccountElement = document.getElementById('destinationAccount');
   const amount = parseFloat(amountElement.value);
-  const destinationAccountNumber = destinationAccountElement.value;
 
   if (!isNaN(amount) && amount > 0) {
-    const destinationAccount = findAccount(destinationAccountNumber);
-    if (destinationAccount) {
-      if (currentAccount.balance >= amount) {
-        currentAccount.balance -= amount;
-        destinationAccount.balance += amount;
-        updateBalance();
-        amountElement.value = '';
-        alert(`Has retirado $${amount} de la cuenta ${currentAccount.number} y depositado en la cuenta ${destinationAccountNumber}`);
-      } else {
-        alert('Saldo insuficiente');
-      }
+    if (currentAccount.balance >= amount) {
+      currentAccount.balance -= amount;
+      updateBalance();
+      amountElement.value = ''; // Limpiar el campo de monto
+      amountElement.placeholder = 'Ingrese el monto'; // Restaurar el marcador de posición
+      alert(`Has retirado $${amount} de la cuenta ${currentAccount.number}`);
     } else {
-      alert(`No se encontró la cuenta destino ${destinationAccountNumber}`);
+      alert('Saldo insuficiente');
     }
   } else {
     alert('Ingrese un monto válido');
   }
 }
+
 
 function checkBalance() {
   const destinationAccountElement = document.getElementById('destinationAccount');
