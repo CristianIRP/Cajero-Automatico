@@ -43,7 +43,8 @@ function withdraw() {
         currentAccount.balance -= amount;
         destinationAccount.balance += amount;
         updateBalance();
-        amountElement.value = '';
+        amountElement.value = ''; // Limpiar el campo de monto
+        amountElement.placeholder = 'Ingrese el monto'; // Restaurar el marcador de posición
         alert(`Has retirado $${amount} de la cuenta ${currentAccount.number} y depositado en la cuenta ${destinationAccountNumber}`);
       } else {
         alert('Saldo insuficiente');
